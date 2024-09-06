@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+   
+     /* Primary Colors */
+    --LightRed: hsl(0, 100%, 67%);
+    --OrangeyYellow: hsl(39, 100%, 56%);
+    --GreenTeal: hsl(166, 100%, 37%);
+    --CobaltBlue: hsl(234, 85%, 45%);
+    /* Gradients */
+         /* For background */
+    --LightSlateBlue: hsl(252, 100%, 67%);
+    --LightRoyalBlue : hsl(241, 81%, 54%);
+        /* For circle */
+    --VioletBlue: hsla(256, 72%, 46%, 1);
+    --PersianBlue: hsla(241, 72%, 46%, 0);
+    /* Neutral */
+    --White: hsl(0, 0%, 100%);
+    --PaleBlue: hsl(221, 100%, 96%);
+    --LightLavender: hsl(241, 100%, 89%);
+    --DarkGrayBlue: hsl(224, 30%, 27%);
+
+    --font-weight-sm:500;
+    --font-weight-md:700;
+    --font-weight-lg:800;
+
+}
+img,input,button,a{
+    display:block;
+}
+li {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+html{
+    font-size:10px;
+    scroll-behavior: smooth;
+}
+body{
+    font-size: 18px;
+    font-family: "Hanken Grotesk",sans-serif;
+    width:100vw;
+    height: 100vh;
+    position: relative;
+}
+.attribution{
+    position: absolute;
+    top:0;
+    left:50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+
+.container{
+    position: absolute;
+    top:20%;
+    left:50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    transform: translateX(-50%);
+    box-shadow: 5px 5px 10px 1px grey;
+    border-radius: 3rem;
+}
+
+.left{
+    display:flex;
+    flex-direction: column;
+    padding:4rem;
+    gap:2rem;
+    align-items: center;
+    border-radius: 3rem;
+    background: linear-gradient(var(--LightSlateBlue),var(--LightRoyalBlue));
+}
+.left .head{
+    color:var(--LightLavender);
+    font-weight: var(--font-weight-md);
+}
+.left .circle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(var(--VioletBlue),var(--PersianBlue));
+    border-radius:50%;
+    padding:3rem 4.5rem;
+    color:var(--LightLavender);
+}
+.circle .score{
+    font-size: 6rem;
+    font-weight: var(--font-weight-lg);
+    color:var(--White);
+}
+.desc{
+    text-align: center;
+    
+}
+.desc h2{
+    color:var(--White);
+    font-weight: var(--font-weight-md);
+}
+.desc p{
+    margin-top: 2rem;
+    color: var(--LightLavender);
+}
+.right{
+    padding :2rem;
+    display:flex;
+    flex-direction: column;
+    gap:2rem;
+
+}
+.right .summary{
+    font-weight: var(--font-weight-lg);
+}
+.right .item{
+     padding : 1rem;
+     display: flex;
+     gap:2rem;
+     justify-content: space-between;
+     align-items: center;
+     border-radius: 1rem;
+}
+.item .skill{
+    display: flex;
+    align-items: center;
+    gap:1rem;
+}
+.item1 {
+    background-color: hsl(0, 100%, 67%,0.2) ;
+}
+.item1 .skill{
+    font-weight: var(--font-weight-md);
+    color:hsl(0, 100%, 67%);
+}
+.item2{
+    background-color: hsl(39, 100%, 56%,0.2);
+}
+.item2 .skill{
+    font-weight: var(--font-weight-md);
+    color:hsl(39, 100%, 56%);
+}
+.item3{
+    background-color: hsl(166, 100%, 37%,0.2);
+}
+.item3 .skill{
+    font-weight: var(--font-weight-md);
+    color:hsl(166, 100%, 37%);
+}
+.item4{
+    background-color: hsl(234, 85%, 45%,0.2);
+}
+.item4 .skill{
+    font-weight: var(--font-weight-md);
+    color:hsl(234, 85%, 45%);
+}
+.sc {
+    color:rgb(190, 185, 185);
+}
+b{
+    color:black;
+}
+.right .continue a{
+    width:100%;
+    height:100%;
+    text-align: center;
+    padding:2rem;
+    border-radius: 3rem;
+    color:white;
+    background: var(--DarkGrayBlue);
+}
+.right .continue a:hover{
+    background: linear-gradient(var(--LightSlateBlue),var(--LightRoyalBlue));
+}
+@media (max-width:450px) {
+ .container{
+    position: absolute;
+    top:0;
+    left:50%;
+    display: grid;
+    width:100%;
+    grid-template-columns: 1fr ;
+    transform: translate(-50%,0);
+    box-shadow: 0px 0px 0px 0px black;
+    border-radius: 0;
+ }   
+ .left{
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+ }
+}
